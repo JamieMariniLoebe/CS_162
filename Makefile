@@ -1,16 +1,17 @@
-Project1_Loebe_Jamie: main.o Ant.o Board.o
-	g++ main.o Ant.o Board.o -o Project1_Loebe_Jamie
+Lab3_Loebe_Jamie: main.o Die.o LoadedDie.o Game.o 
+	g++ main.o Die.o LoadedDie.o Game.o -o Lab3_Loebe_Jamie
 
-main.o: main.cpp
+main.o: main.cpp 
 	g++ -c main.cpp
 
-Ant.o: Ant.cpp Ant.hpp
-	g++ -c Ant.cpp
+Die.o: Die.cpp Die.hpp
+	g++ -c Die.cpp
 
-Board.o: Board.cpp Board.hpp
-	g++ -c Board.cpp
+LoadedDie.o: LoadedDie.cpp LoadedDie.hpp
+	g++ -c LoadedDie.cpp
+
+Game.o: Game.cpp Game.hpp
+	g++ -c Game.cpp
 
 clean:
-	rm *.o Project1_Loebe_Jamie
-
-
+	rm *.o Lab3_Loebe_Jamie
