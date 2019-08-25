@@ -1,14 +1,16 @@
-Lab1_Loebe_Jamie: matrixCalculator.o readMatrix.o determinant.o
-	g++ matrixCalculator.o readMatrix.o determinant.o -o Lab1_Loebe_Jamie
+Project1_Loebe_Jamie: main.o Ant.o Board.o
+	g++ main.o Ant.o Board.o -o Project1_Loebe_Jamie
 
-matrixCalculator.o: matrixCalculator.cpp
-	g++ -c matrixCalculator.cpp
+main.o: main.cpp
+	g++ -c main.cpp
 
-readMatrix.o: readMatrix.cpp readMatrix.hpp
-	g++ -c readMatrix.cpp
+Ant.o: Ant.cpp Ant.hpp
+	g++ -c Ant.cpp
 
-determinant.o: determinant.cpp determinant.hpp
-	g++ -c determinant.cpp
+Board.o: Board.cpp Board.hpp
+	g++ -c Board.cpp
 
-clean: 
-	rm *.o Lab1_Loebe_Jamie
+clean:
+	rm *.o Project1_Loebe_Jamie
+
+
